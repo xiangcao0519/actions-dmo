@@ -1,0 +1,12 @@
+name: Issue Demo
+on:
+  issues:
+    types: [opened, closed]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build
+        run: echo "Hello, World!"
